@@ -1,0 +1,24 @@
+.securitiesCard {
+  color: #343694;
+  background: #fff;
+  display: block;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.cardButton {
+  background-color: #343694;
+  color: white;
+  border-radius: 5px;
+  padding: 0.5em;
+  margin: 1em;
+  border: none;
+  cursor: pointer;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./css/App.css";
-import "carbon-components/css/carbon-components.min.css";
+
 import ComparisonPage from "./pages/comparisonPage";
 import DetailsPage from "./pages/detailPage";
 import SavedPage from "./pages/savedPage";
