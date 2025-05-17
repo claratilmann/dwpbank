@@ -1,4 +1,5 @@
 import React from "react";
+import { useMarkedSecurities } from "../markLogic";
 import {
   Table,
   TableHead,
@@ -8,7 +9,6 @@ import {
   TableHeader,
   Button,
 } from "@carbon/react";
-import securities from "../data.json";
 
 const headers = [
   "wkn",
@@ -22,34 +22,37 @@ const headers = [
   "Aktion",
 ];
 
-const ComparisonPage = () => (
-  <div>
-    <Table size="lg" useZebraStyles={false}>
-      <TableHead>
-        <TableRow>
-          {headers.map((header) => (
-            <TableHeader id={header.key} key={header}>
-              {header}
-            </TableHeader>
-          ))}
-        </TableRow>
-      </TableHead>
-      <TableBody>
-        {securities.map((row) => (
-          <TableRow key={row.wkn}>
-            {Object.keys(row)
-              .filter((key) => key !== "id")
-              .map((key) => {
-                return <TableCell key={key}>{row[key]}</TableCell>;
-              })}
-            <TableCell>
-              <Button>Entfernen</Button>
-            </TableCell>
+const ComparisonPage = () => {
+  const { marked, toggleMark } = useMarkedSecurities();
+  return (
+    <div>
+      <Table size="lg" useZebraStyles={false}>
+        <TableHead>
+          <TableRow>
+            {headers.map((header) => (
+              <TableHeader id={header.key} key={header}>
+                {header}
+              </TableHeader>
+            ))}
           </TableRow>
-        ))}
-      </TableBody>
-    </Table>
-  </div>
-);
+        </TableHead>
+        <TableBody>
+          {marked.map((row) => (
+            <TableRow key={row.wkn}>
+              {Object.keys(row)
+                .filter((key) => key !== "id")
+                .map((key) => {
+                  return <TableCell key={key}>{row[key]}</TableCell>;
+                })}
+              <TableCell>
+                <Button onClick={() => toggleMark(row)}>Entfernen</Button>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </div>
+  );
+};
 
 export default ComparisonPage;

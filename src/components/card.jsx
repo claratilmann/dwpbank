@@ -1,10 +1,13 @@
 import PropTypes from "prop-types";
 import { useSavedSecurities } from "../saveLogic";
+import { useMarkedSecurities } from "../markLogic";
 import "../css/card.css";
 
 const Card = ({ security }) => {
   const { saved, toggleSave } = useSavedSecurities();
   const isSaved = saved.some((s) => s.wkn === security.wkn);
+  const { marked, toggleMark } = useMarkedSecurities();
+  const isMarked = marked.some((s) => s.wkn === security.wkn);
 
   return (
     <div className="securitiesCard">
@@ -18,6 +21,13 @@ const Card = ({ security }) => {
         style={{ backgroundColor: isSaved ? "#e74c3c" : "#343694" }}
       >
         {isSaved ? "Entfernen" : "Speichern"}
+      </button>
+      <button
+        className="cardButton"
+        style={{ backgroundColor: isMarked ? "#ffb300" : "#888" }}
+        onClick={() => toggleMark(security)}
+      >
+        {isMarked ? "Vergleich entfernen" : "Zum Vergleich"}
       </button>
     </div>
   );
