@@ -1,0 +1,17 @@
+.filterSection {
+  width: 25vw;
+  min-width: 200px;
+  background: #f4f4f4;
+  padding: 2rem;
+}
+
+.filterSection .cds--radio-button-group {
+  margin-top: 2rem;
+}
+
+.filterSection .cds--label {
+  font-weight: bold;
+  color: #343694;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
