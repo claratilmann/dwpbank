@@ -1,4 +1,5 @@
 import { Link } from "carbon-components-react";
+import "../css/navbar.css";
 
 const NavigationBar = () => {
   return (
@@ -8,7 +9,7 @@ const NavigationBar = () => {
           <Link href="/">Startseite</Link>
         </li>
         <li>
-          <Link href="/search">Favoriten</Link>
+          <Link href="/saved">Favoriten</Link>
         </li>
         <li>
           <Link href="/comparison">Vergleich</Link>
