@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+import "../css/card.css";
+import Card from "../components/card";
+import securities from "../data.json";
+
 const SavedPage = () => {
   return (
-    <div>
-      <h1>Saved Page</h1>
-      <p>This is the saved page where you can view your saved items.</p>
+    <div className="cardGrid">
+      {securities.map((security, idx) => (
+        <Card key={idx} security={security} />
+      ))}
     </div>
   );
 };

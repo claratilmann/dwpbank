@@ -1,4 +1,3 @@
-import { Button } from "@carbon/react";
 import PropTypes from "prop-types";
 import "../css/card.css";
 
