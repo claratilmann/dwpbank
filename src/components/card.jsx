@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useSavedSecurities } from "../saveLogic";
 import { useMarkedSecurities } from "../markLogic";
+import { Link } from "react-router-dom";
 import "../css/card.css";
 
 const Card = ({ security }) => {
@@ -14,7 +15,9 @@ const Card = ({ security }) => {
       <h1>{security.name}</h1>
       <p>Typ: {security.typ}</p>
       <p>Risiko: {security.anlagerisiko}</p>
-      <button className="cardButton">Mehr Erfahren</button>
+      <Link to={`/detail/${security.wkn}`}>
+        <button className="cardButton">Mehr Erfahren</button>
+      </Link>
       <button
         className="cardButton"
         onClick={() => toggleSave(security)}

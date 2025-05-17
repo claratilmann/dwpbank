@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./css/App.css";
 
@@ -17,7 +16,7 @@ function App() {
         <Route path="/" element={<SearchPage />} />
         <Route path="/comparison" element={<ComparisonPage />} />
         <Route path="/saved" element={<SavedPage />} />
-        <Route path="/details" element={<DetailsPage />} />
+        <Route path="/detail/:wkn" element={<DetailsPage />} />
       </Routes>
     </Router>
   );
