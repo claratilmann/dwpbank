@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { useSavedSecurities } from "../saveLogic";
 import { useMarkedSecurities } from "../markLogic";
 import { Link } from "react-router-dom";
-import { Card, Button } from "@mui/material";
+import { Card, Button, Typography } from "@mui/material";
 import "../css/card.css";
 
 const SecuritiesCard = ({ security }) => {
@@ -13,9 +13,9 @@ const SecuritiesCard = ({ security }) => {
 
   return (
     <Card>
-      <h1>{security.name}</h1>
-      <p>Typ: {security.typ}</p>
-      <p>Risiko: {security.anlagerisiko}</p>
+      <Typography variant="h2">{security.name}</Typography>
+      <Typography variant="body1">Typ: {security.typ}</Typography>
+      <Typography variant="body1">Risiko: {security.anlagerisiko}</Typography>
       <Link to={`/detail/${security.wkn}`}>
         <Button>Mehr Erfahren</Button>
       </Link>

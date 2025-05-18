@@ -23,3 +23,9 @@
   gap: 2rem;
   padding: 2rem;
 }
+
+.MuiTypography-h2 {
+  font-size: 2rem !important;
+  color: #343694;
+  margin-bottom: 1rem;
+}

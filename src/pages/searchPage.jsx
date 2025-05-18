@@ -10,6 +10,7 @@ import {
   FormControlLabel,
   FormControl,
   Button,
+  Typography,
 } from "@mui/material";
 
 const typOptions = [
@@ -45,8 +46,10 @@ const SearchPage = () => {
   return (
     <div style={{ display: "flex" }}>
       <div className="filterSection">
-        <h2>Filter</h2>
-        <p>Hier können Sie verschiedene Filteroptionen auswählen</p>
+        <Typography variant="h2">Filter</Typography>
+        <Typography variant="body1">
+          Hier können Sie verschiedene Filteroptionen auswählen
+        </Typography>
         <FormControl>
           <FormLabel id="typ-radio-buttons-group-label">Typ</FormLabel>
           <RadioGroup
