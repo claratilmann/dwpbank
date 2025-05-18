@@ -30,15 +30,18 @@ const SecuritiesCard = ({ security }) => {
       <Typography variant="h2">{security.name}</Typography>
       <Typography variant="body1">Typ: {security.typ}</Typography>
       <Typography variant="body1">Risiko: {security.anlagerisiko}</Typography>
-      <Link to={`/detail/${security.wkn}`}>
-        <Button variant="contained">Mehr Erfahren</Button>
-      </Link>
-      <Button
-        variant={isMarked ? "outlined" : "contained"}
-        onClick={() => toggleMark(security)}
-      >
-        {isMarked ? "Nicht vergleichen" : "Vergleichen"}
-      </Button>
+
+      <div>
+        <Link to={`/detail/${security.wkn}`}>
+          <Button variant="contained">Mehr Erfahren</Button>
+        </Link>
+        <Button
+          variant={isMarked ? "contained" : "outlined"}
+          onClick={() => toggleMark(security)}
+        >
+          {isMarked ? "Nicht vergleichen" : "Vergleichen"}
+        </Button>
+      </div>
     </Card>
   );
 };
