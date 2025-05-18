@@ -13,3 +13,9 @@
 .filterSection .MuiFormLabel-root {
   margin-top: 1rem;
 }
+.filterSection .MuiRadio-root.Mui-checked {
+  color: #343694 !important;
+}
+.filterSection .MuiFormLabel-root.Mui-focused {
+  color: #343694 !important;
+}
