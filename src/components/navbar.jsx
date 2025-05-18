@@ -24,7 +24,7 @@ const NavigationBar = () => {
           to="/saved"
           className="navLink"
         >
-          Favoriten
+          Gespeichert
         </Button>
         <Button
           color="inherit"

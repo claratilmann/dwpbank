@@ -79,12 +79,7 @@ const DetailPage = () => {
         }}
       >
         <div style={{ flex: 1 }}>
-          <Typography
-            variant="h1"
-            style={{ fontSize: "2rem", marginBottom: "1rem" }}
-          >
-            {security.name}
-          </Typography>
+          <Typography variant="h1">{security.name}</Typography>
 
           <Typography variant="body1">
             <strong>WKN:</strong> {security.wkn}

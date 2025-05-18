@@ -24,3 +24,9 @@ body,
   margin: 1rem;
   outline: 1px solid #343694 !important;
 }
+
+.MuiTypography-h1 {
+  font-size: 2rem !important;
+  color: #343694;
+  margin-bottom: 1rem;
+}
