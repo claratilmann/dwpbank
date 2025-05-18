@@ -48,7 +48,8 @@ const SearchPage = () => {
       <div className="filterSection">
         <Typography variant="h2">Filter</Typography>
         <Typography variant="body1">
-          Hier können Sie verschiedene Filteroptionen auswählen
+          Hier können Sie mit verschiedenen Filteroptionen auswählen, welche
+          Wertpapiere Ihnen angezeigt werden.
         </Typography>
         <FormControl>
           <FormLabel id="typ-radio-buttons-group-label">Typ</FormLabel>
