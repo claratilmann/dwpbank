@@ -3,7 +3,14 @@ import Card from "../components/card";
 import securities from "../data.json";
 import "../css/card.css";
 import "../css/searchPage.css";
-import { RadioButton, RadioButtonGroup, Button } from "@carbon/react";
+import {
+  Radio,
+  FormLabel,
+  RadioGroup,
+  FormControlLabel,
+  FormControl,
+  Button,
+} from "@mui/material";
 
 const typOptions = [
   { label: "Aktie", value: "Aktie" },
@@ -40,40 +47,49 @@ const SearchPage = () => {
       <div className="filterSection">
         <h2>Filter</h2>
         <p>Hier können Sie verschiedene Filteroptionen auswählen</p>
-        <RadioButtonGroup
-          legendText="Typ"
-          name="radio-button-group-typ"
-          orientation="vertical"
-          valueSelected={selectedTyp}
-          onChange={setSelectedTyp}
-        >
-          {typOptions.map((option) => (
-            <RadioButton
-              key={option.value}
-              labelText={option.label}
-              value={option.value}
-              id={`typ-${option.value}`}
+        <FormControl>
+          <FormLabel id="typ-radio-buttons-group-label">Typ</FormLabel>
+          <RadioGroup
+            aria-labelledby="typ-radio-buttons-group-label"
+            name="typ-radio-buttons-group"
+            value={selectedTyp}
+            onChange={(e) => setSelectedTyp(e.target.value)}
+          >
+            <FormControlLabel value="Aktie" control={<Radio />} label="Aktie" />
+            <FormControlLabel
+              value="Anleihe"
+              control={<Radio />}
+              label="Anleihe"
             />
-          ))}
-        </RadioButtonGroup>
-        <RadioButtonGroup
-          legendText="Risiko"
-          name="radio-button-group-Risiko"
-          orientation="vertical"
-          valueSelected={selectedRisiko}
-          onChange={setSelectedRisiko}
-        >
-          {risikoOptions.map((option) => (
-            <RadioButton
-              key={option.value}
-              labelText={option.label}
-              value={option.value}
-              id={`risiko-${option.value}`}
+            <FormControlLabel value="Fonds" control={<Radio />} label="Fonds" />
+            <FormControlLabel value="ETF" control={<Radio />} label="ETF" />
+          </RadioGroup>
+        </FormControl>
+
+        <FormControl>
+          <FormLabel id="risiko-radio-buttons-group-label">Typ</FormLabel>
+          <RadioGroup
+            aria-labelledby="risiko-radio-buttons-group-label"
+            name="risiko-radio-buttons-group"
+            value={selectedRisiko}
+            onChange={(e) => setSelectedRisiko(e.target.value)}
+          >
+            <FormControlLabel value="Hoch" control={<Radio />} label="Hoch" />
+            <FormControlLabel
+              value="Mittel"
+              control={<Radio />}
+              label="Mittel"
             />
-          ))}
-        </RadioButtonGroup>
+            <FormControlLabel
+              value="Niedrig"
+              control={<Radio />}
+              label="Niedrig"
+            />
+          </RadioGroup>
+        </FormControl>
+
         <Button
-          kind="secondary"
+          variant="contained"
           onClick={handleReset}
           style={{ marginTop: "1rem" }}
         >

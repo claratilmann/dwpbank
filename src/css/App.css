@@ -1,13 +1,19 @@
-.App {
-  width: 100%;
-  margin-bottom: 5%;
-  text-align: left;
-  line-height: 1.6;
-  color: #333333;
-  font-size: max(1.2em, 16px);
-}
 main {
   margin-left: 5%;
   margin-right: 5%;
   padding-top: 2%;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.MuiButton-contained {
+  background-color: #343694 !important;
+  color: #fff !important;
+  margin: 1rem;
 }

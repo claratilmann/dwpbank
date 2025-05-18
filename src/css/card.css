@@ -1,9 +1,10 @@
-.securitiesCard {
+.MuiCard-root {
   color: #343694;
   background: #fff;
   display: block;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid #00000027;
+  padding: 1rem;
 }
 
 .cardButton {

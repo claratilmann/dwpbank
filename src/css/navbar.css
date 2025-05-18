@@ -1,32 +1,7 @@
-.navigation-bar {
-  color: #343694;
-  background: #fff;
-  border-bottom: 1px solid #000;
+.MuiAppBar-root {
+  color: #fff !important;
+  background: #343694 !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.navigation-list {
-  display: flex;
-  list-style: none;
-}
-
-.navigation-list li {
-  padding: 1.5%;
-  margin: 0% 2%;
-}
-
-.navLink {
-  padding: 0.3em;
-  color: #343694;
-  font-weight: 600;
-  float: right;
-}
-
-.navigation-list a:hover,
-.navigation-list a:focus {
-  color: #fff;
-  background-color: #343694;
-  border-radius: 3px;
 }
 
 .account {

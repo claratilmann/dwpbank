@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import Button from "@carbon/react/es/components/Button";
+import { Button, Typography } from "@mui/material";
 import securities from "../data.json";
 
 const DetailPage = () => {
@@ -11,30 +11,35 @@ const DetailPage = () => {
   }
 
   return (
-    <div>
-      <Button onClick={() => window.history.back()}>Zurück zur Suche</Button>
-      <h1>{security.name}</h1>
-      <p>
+    <div style={{ padding: "2rem" }}>
+      <Button variant="contained" onClick={() => window.history.back()}>
+        Zurück zur Suche
+      </Button>
+      <Typography variant="h1" style={{ fontSize: "2rem" }}>
+        {security.name}
+      </Typography>
+      <Typography variant="body1">
         <strong>WKN:</strong> {security.wkn}
-      </p>
-      <p>
+      </Typography>
+      <Typography variant="body1">
         <strong>ISIN:</strong> {security.isin}
-      </p>
-      <p>
+      </Typography>
+      <Typography variant="body1">
         <strong>Typ:</strong> {security.typ}
-      </p>
-      <p>
+      </Typography>
+      <Typography variant="body1">
         <strong>Kurs:</strong> {security.kurs}
-      </p>
-      <p>
+      </Typography>
+      <Typography variant="body1">
         <strong>Anlagerisiko:</strong> {security.anlagerisiko}
-      </p>
-      <p>
-        <strong>Hauptversammlung:</strong> {security.hauptversammlung}
-      </p>
-      <p>
+      </Typography>
+      <Typography variant="body1">
+        <strong>Hauptversammlung:</strong>{" "}
+        {security.datum_naechste_hauptversammlung}
+      </Typography>
+      <Typography variant="body1">
         <strong>Emittent:</strong> {security.emittent}
-      </p>
+      </Typography>
     </div>
   );
 };

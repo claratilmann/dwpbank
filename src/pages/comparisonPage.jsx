@@ -6,9 +6,10 @@ import {
   TableBody,
   TableRow,
   TableCell,
-  TableHeader,
+  TableContainer,
+  Paper,
   Button,
-} from "@carbon/react";
+} from "@mui/material";
 
 const headers = [
   "wkn",
@@ -25,33 +26,35 @@ const headers = [
 const ComparisonPage = () => {
   const { marked, toggleMark } = useMarkedSecurities();
   return (
-    <div>
-      <Table size="lg" useZebraStyles={false}>
+    <TableContainer component={Paper}>
+      <Table>
         <TableHead>
           <TableRow>
             {headers.map((header) => (
-              <TableHeader id={header.key} key={header}>
-                {header}
-              </TableHeader>
+              <TableCell key={header}>{header}</TableCell>
             ))}
           </TableRow>
         </TableHead>
         <TableBody>
           {marked.map((row) => (
             <TableRow key={row.wkn}>
-              {Object.keys(row)
-                .filter((key) => key !== "id")
-                .map((key) => {
-                  return <TableCell key={key}>{row[key]}</TableCell>;
-                })}
+              {headers.slice(0, -1).map((key) => (
+                <TableCell key={key}>{row[key.toLowerCase()]}</TableCell>
+              ))}
               <TableCell>
-                <Button onClick={() => toggleMark(row)}>Entfernen</Button>
+                <Button
+                  variant="contained"
+                  color="error"
+                  onClick={() => toggleMark(row)}
+                >
+                  Entfernen
+                </Button>
               </TableCell>
             </TableRow>
           ))}
         </TableBody>
       </Table>
-    </div>
+    </TableContainer>
   );
 };
 

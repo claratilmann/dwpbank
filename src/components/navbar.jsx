@@ -1,32 +1,46 @@
-import { Link } from "@carbon/react";
+import { AppBar, Toolbar, Button, Box } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
 import "../css/navbar.css";
 
 const NavigationBar = () => {
   return (
-    <nav aria-label="Navigation" className="navigation-bar">
-      <ul className="navigation-list">
-        <li>
-          <Link href="/" class="navLink">
-            Startseite
-          </Link>
-        </li>
-        <li>
-          <Link href="/saved" class="navLink">
-            Favoriten
-          </Link>
-        </li>
-        <li>
-          <Link href="/comparison" class="navLink">
-            Vergleich
-          </Link>
-        </li>
-        <li>
-          <Link href="/" class="account">
-            Mein Konto
-          </Link>
-        </li>
-      </ul>
-    </nav>
+    <AppBar position="static">
+      <Toolbar>
+        <Button
+          color="inherit"
+          component={RouterLink}
+          to="/"
+          className="navLink"
+        >
+          Startseite
+        </Button>
+        <Button
+          color="inherit"
+          component={RouterLink}
+          to="/saved"
+          className="navLink"
+        >
+          Favoriten
+        </Button>
+        <Button
+          color="inherit"
+          component={RouterLink}
+          to="/comparison"
+          className="navLink"
+        >
+          Vergleich
+        </Button>
+        <Box sx={{ flexGrow: 1 }} />
+        <Button
+          color="inherit"
+          component={RouterLink}
+          to="/"
+          className="account"
+        >
+          Mein Konto
+        </Button>
+      </Toolbar>
+    </AppBar>
   );
 };
 
