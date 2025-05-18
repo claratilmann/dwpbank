@@ -18,7 +18,7 @@ const headers = [
   "Typ",
   "Kurs",
   "Anlagerisiko",
-  "Hauptversammlung",
+  "Datum_naechste_hauptversammlung",
   "Emittent",
   "Aktion",
 ];

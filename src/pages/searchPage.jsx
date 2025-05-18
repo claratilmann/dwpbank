@@ -70,7 +70,7 @@ const SearchPage = () => {
         </FormControl>
 
         <FormControl>
-          <FormLabel id="risiko-radio-buttons-group-label">Typ</FormLabel>
+          <FormLabel id="risiko-radio-buttons-group-label">Risiko</FormLabel>
           <RadioGroup
             aria-labelledby="risiko-radio-buttons-group-label"
             name="risiko-radio-buttons-group"

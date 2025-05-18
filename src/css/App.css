@@ -17,3 +17,10 @@ body,
   color: #fff !important;
   margin: 1rem;
 }
+
+.MuiButton-outlined {
+  background-color: #fff !important;
+  color: #343694 !important;
+  margin: 1rem;
+  outline: 1px solid #343694 !important;
+}

@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import { Button, Typography, IconButton } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import securities from "../data.json";
 import StarIcon from "@mui/icons-material/Star";
-import StarBorderIcon from "@mui/icons-material/StarBorder";
+import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import { useSavedSecurities } from "../saveLogic";
 import { useMarkedSecurities } from "../markLogic";
 import { Line } from "react-chartjs-2";
@@ -17,11 +17,24 @@ import {
 ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement);
 
 const exampleData = {
-  labels: ["Jan", "Feb", "Mar", "Apr", "Mai", "Jun", "Jul"],
+  labels: [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "Mai",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Okt",
+    "Nov",
+    "Dez",
+  ],
   datasets: [
     {
       label: "Kursverlauf",
-      data: [100, 110, 105, 120, 115, 130, 125],
+      data: [100, 110, 105, 120, 115, 130, 125, 140, 135, 150, 145, 160],
       fill: false,
       borderColor: "#343694",
       tension: 0.3,
@@ -66,24 +79,12 @@ const DetailPage = () => {
         }}
       >
         <div style={{ flex: 1 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
-            <Typography
-              variant="h1"
-              style={{ fontSize: "2rem", marginBottom: "1rem" }}
-            >
-              {security.name}
-            </Typography>
-            <IconButton
-              onClick={() => toggleSave(security)}
-              style={{
-                color: "#343694",
-                zIndex: 1,
-                marginBottom: "1rem",
-              }}
-            >
-              {isSaved ? <StarIcon /> : <StarBorderIcon />}
-            </IconButton>
-          </div>
+          <Typography
+            variant="h1"
+            style={{ fontSize: "2rem", marginBottom: "1rem" }}
+          >
+            {security.name}
+          </Typography>
 
           <Typography variant="body1">
             <strong>WKN:</strong> {security.wkn}
@@ -107,13 +108,26 @@ const DetailPage = () => {
           <Typography variant="body1">
             <strong>Emittent:</strong> {security.emittent}
           </Typography>
-          <Button
-            variant={isMarked ? "outlined" : "contained"}
-            style={{ marginTop: "1rem" }}
-            onClick={() => toggleMark(security)}
-          >
-            {isMarked ? "Nicht vergleichen" : "Vergleichen"}
-          </Button>
+          <div>
+            <Button
+              onClick={() => toggleSave(security)}
+              variant={isSaved ? "outlined" : "contained"}
+              startIcon={<StarIcon sx={{ verticalAlign: "middle" }} />}
+              style={{
+                margin: "1rem",
+              }}
+            >
+              {isSaved ? "Nicht speichern" : "Speichern"}
+            </Button>
+            <Button
+              variant={isMarked ? "outlined" : "contained"}
+              style={{ margin: "1rem" }}
+              startIcon={<CompareArrowsIcon sx={{ verticalAlign: "middle" }} />}
+              onClick={() => toggleMark(security)}
+            >
+              {isMarked ? "Nicht vergleichen" : "Vergleichen"}
+            </Button>
+          </div>
         </div>
 
         <div

@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../components/card";
 import { useSavedSecurities } from "../saveLogic";
 import "../css/card.css";
+import { Typography } from "@mui/material";
 
 const SavedPage = () => {
   const { saved } = useSavedSecurities();
@@ -9,7 +10,9 @@ const SavedPage = () => {
   return (
     <div className="cardGrid">
       {saved.length === 0 ? (
-        <p>Keine gespeicherten Wertpapiere.</p>
+        <Typography variant="body1">
+          Keine gespeicherten Wertpapiere.
+        </Typography>
       ) : (
         saved.map((security) => <Card key={security.wkn} security={security} />)
       )}

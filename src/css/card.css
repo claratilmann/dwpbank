@@ -12,7 +12,6 @@
   margin: 0.5rem 0.25rem;
   padding: 0.5rem 1rem;
   display: inline-block;
-  min-width: 0;
 }
 
 .cardGrid {
@@ -26,4 +25,12 @@
   font-size: 2rem !important;
   color: #343694;
   margin-bottom: 1rem;
+}
+.MuiCard-root a {
+  color: #343694;
+  text-decoration: underline;
+  margin: 0.5rem 0.25rem;
+  padding: 0.5rem 1rem;
+  background: none;
+  box-shadow: none;
 }
