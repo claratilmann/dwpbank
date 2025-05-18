@@ -3,10 +3,10 @@
   max-width: 300px;
   min-width: 150px;
   padding: 2rem;
+
   display: flex;
   flex-direction: column;
   border-right: #00000027 1px solid;
-  height: 100vh;
   box-sizing: border-box;
 }
 
