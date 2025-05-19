@@ -1,3 +1,8 @@
+/* This renders the comparison page where users can see all the available information of the securities they have marked for comparison in a table.
+There is also a button to remove the security from the comparison list.
+It uses useMarkedSecurities to get the marked securites and maps over them to create a table row for each security.
+*/
+
 import React from "react";
 import { useMarkedSecurities } from "../markLogic";
 import {

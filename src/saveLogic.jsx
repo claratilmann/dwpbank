@@ -1,3 +1,7 @@
+/* This file contains the logic for saving securities for comparison. 
+It uses createContext and useContext to do this without explicitly passing props.
+*/
+
 import React, { createContext, useContext, useState, useEffect } from "react";
 
 const SavedSecuritiesContext = createContext();

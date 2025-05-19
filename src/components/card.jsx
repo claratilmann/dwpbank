@@ -1,3 +1,7 @@
+/* This component renders a card for each security. It displays the name, type, and risk of the security.
+It also provides buttons to save or mark the security for comparison, and a link to view more details about the security.
+*/
+
 import PropTypes from "prop-types";
 import { useSavedSecurities } from "../saveLogic";
 import { useMarkedSecurities } from "../markLogic";
@@ -49,8 +53,8 @@ SecuritiesCard.propTypes = {
   security: PropTypes.shape({
     wkn: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    typ: PropTypes.string,
-    anlagerisiko: PropTypes.string,
+    typ: PropTypes.string.isRequired,
+    anlagerisiko: PropTypes.string.isRequired,
   }).isRequired,
 };
 

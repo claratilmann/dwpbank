@@ -1,3 +1,9 @@
+/* This renders the search Page where users can filter the securities by type and risk.
+ It contains two radio button groups for this filtering. Selecting one of these options executes a filter function.
+ Below the filter radio buttons there is a button which resets the filters to an empty string.
+On the right side of the page, all securities that match the selected filters are displayed in a grid, using the card component
+*/
+
 import React, { useState } from "react";
 import Card from "../components/card";
 import securities from "../data.json";

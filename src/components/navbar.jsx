@@ -1,3 +1,9 @@
+/* This class  renders the navigation bar at the top of the page. 
+It contains links to the home page, the page to see saved securities and the page for comparing securities.
+Additionally, it contains buttons to access the users account and to make an oppointment for a consultation.
+These Buttons are not functional and are meant to serve as indicators for future functionality.
+*/
+
 import { AppBar, Toolbar, Button, Box, IconButton } from "@mui/material";
 import { Link as RouterLink } from "react-router-dom";
 import AccountBalanceIcon from "@mui/icons-material/AccountBalance";

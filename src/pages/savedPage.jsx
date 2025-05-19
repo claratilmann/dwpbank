@@ -1,3 +1,7 @@
+/* This component shows all of the saved securities in a grid Layout using the Card component.
+It uses useSavedSecurites to get the saved securities and maps over them to create a card for each security.
+ */
+
 import React from "react";
 import Card from "../components/card";
 import { useSavedSecurities } from "../saveLogic";

@@ -1,3 +1,9 @@
+/*This renders the detail page for a specific security.
+It displays all of the available information about the security. 
+There is also a graph that should show the price development of the security, it currently shows a placeholder graph, as this data is not available.
+Additionally, there are buttons to return to the previous page, save the security and mark them for comparison
+*/
+
 import { useParams } from "react-router-dom";
 import { Button, Typography } from "@mui/material";
 import securities from "../data.json";
@@ -68,7 +74,7 @@ const DetailPage = () => {
   return (
     <div style={{ padding: "2rem" }}>
       <Button variant="contained" onClick={() => window.history.back()}>
-        Zurück zur Suche
+        Zurück
       </Button>
 
       <div
@@ -133,6 +139,7 @@ const DetailPage = () => {
             height: 350,
           }}
         >
+          <Typography variant="h2">Kurs</Typography>
           <Line data={exampleData} options={exampleOptions} />
         </div>
       </div>
