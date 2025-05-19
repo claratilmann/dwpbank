@@ -1,6 +1,6 @@
-/* This renders the comparison page where users can see all the available information of the securities they have marked for comparison in a table.
-There is also a button to remove the security from the comparison list.
-It uses useMarkedSecurities to get the marked securites and maps over them to create a table row for each security.
+/* Hier wird die Vergleichsseite erzeugt, auf der der Benutzer alle verfügbaren Informationen zu den Wertpapieren, die er zum Vergleich markiert hat, in einer Tabelle sehen kann.
+Es gibt außerdem Knöpfe zum Entfernen eines Wertpapiers aus der Vergleichsliste.
+Mithilfe von useMarkedSecurities werden die markierten Wertpapiere abgerufen und zugeordnet, um für jedes Wertpapier eine Tabellenzeile zu erstellen.
 */
 
 import React from "react";

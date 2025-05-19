@@ -1,7 +1,7 @@
-/* This class  renders the navigation bar at the top of the page. 
-It contains links to the home page, the page to see saved securities and the page for comparing securities.
-Additionally, it contains buttons to access the users account and to make an oppointment for a consultation.
-These Buttons are not functional and are meant to serve as indicators for future functionality.
+/* Diese Klasse stellt die Navigationsleiste am oberen Rand der Seite dar. 
+Sie enthält Links zur Startseite, zur Seite mit den gespeicherten Wertpapieren und zur Seite mit dem Wertpapiervergleich.
+Außerdem enthält sie Schaltflächen für den Zugriff auf das Benutzerkonto und für die Vereinbarung eines Beratungstermins.
+Diese Schaltflächen sind nicht funktionsfähig und sollen als Indikatoren für zukünftige Funktionen dienen.
 */
 
 import { AppBar, Toolbar, Button, Box, IconButton } from "@mui/material";

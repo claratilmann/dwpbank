@@ -1,5 +1,5 @@
-/* This file contains the logic for marking securities for comparison. 
-It uses createContext and useContext to do this without explicitly passing props.
+/* Diese Datei enthält die Logik um die Wertpapieren für den Vergleich zu markeiren. 
+Sie verwendet createContext und useContext, um dies ohne explizite Übergabe von props zu tun.
 */
 
 import React, { createContext, useContext, useState, useEffect } from "react";

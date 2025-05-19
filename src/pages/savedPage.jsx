@@ -1,5 +1,5 @@
-/* This component shows all of the saved securities in a grid Layout using the Card component.
-It uses useSavedSecurites to get the saved securities and maps over them to create a card for each security.
+/* Diese Komponente zeigt alle gespeicherten Wertpapiere in einem Raster unter Verwendung der Komponente Card an.
+Sie verwendet useSavedSecurites, um die gespeicherten Wertpapiere abzurufen und Card für jedes Wertpapier zu erstellen.
  */
 
 import React from "react";

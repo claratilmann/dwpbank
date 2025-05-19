@@ -1,5 +1,5 @@
-/* This component renders a card for each security. It displays the name, type, and risk of the security.
-It also provides buttons to save or mark the security for comparison, and a link to view more details about the security.
+/* Diese Komponente stellt für jedes Wertpapier eine Karte dar. Sie zeigt den Namen, den Typ und das Risiko des Wertpapiers an.
+Außerdem bietet sie Schaltflächen zum Speichern oder Markieren des Wertpapiers für den Vergleich sowie einen Link, über den weitere Details zum Wertpapier angezeigt werden können.
 */
 
 import PropTypes from "prop-types";

@@ -1,7 +1,7 @@
-/*This renders the detail page for a specific security.
-It displays all of the available information about the security. 
-There is also a graph that should show the price development of the security, it currently shows a placeholder graph, as this data is not available.
-Additionally, there are buttons to return to the previous page, save the security and mark them for comparison
+/*Hier wird die Detailseite für ein bestimmtes Wertpapier erzeugt.
+Sie zeigt alle verfügbaren Informationen über das Wertpapier an. 
+Es gibt auch ein Diagramm, das die Kursentwicklung des Wertpapiers zeigen sollte, es zeigt allerdings derzeit ein Platzhalterdiagramm, da diese Daten nicht verfügbar sind.
+Außerdem gibt es Knöpfe, um zur vorherigen Seite zurückzukehren, das Wertpapier zu speichern und es für einen Vergleich zu markieren.
 */
 
 import { useParams } from "react-router-dom";
