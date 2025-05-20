@@ -9,8 +9,8 @@ import { Button, Typography } from "@mui/material";
 import securities from "../data.json";
 import StarIcon from "@mui/icons-material/Star";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
-import { useSavedSecurities } from "../saveLogic";
-import { useMarkedSecurities } from "../markLogic";
+import { useSavedSecurities } from "../logic/saveLogic";
+import { useMarkedSecurities } from "../logic/markLogic";
 import { Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,

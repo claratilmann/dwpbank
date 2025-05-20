@@ -4,7 +4,7 @@ Sie verwendet useSavedSecurites, um die gespeicherten Wertpapiere abzurufen und 
 
 import React from "react";
 import Card from "../components/card";
-import { useSavedSecurities } from "../saveLogic";
+import { useSavedSecurities } from "../logic/saveLogic";
 import "../css/card.css";
 import { Typography } from "@mui/material";
 

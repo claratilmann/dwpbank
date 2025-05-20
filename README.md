@@ -22,6 +22,12 @@ Dies ist eine React-Anwendung, mit der Sie Wertpapiere suchen, filtern, vergleic
 
 Die App ist dann unter http://localhost:5173 verfügbar.
 
+## Erstellen des Projekts
+
+Um das Projekt für die Produktion zu erstellen, verwenden Sie den folgenden Befehl:
+
+npm run build
+
 ## Features
 
 - **Suche & Filter:** Wertpapiere nach Typ und Risiko filtern

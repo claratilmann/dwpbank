@@ -4,7 +4,7 @@ Mithilfe von useMarkedSecurities werden die markierten Wertpapiere abgerufen und
 */
 
 import React from "react";
-import { useMarkedSecurities } from "../markLogic";
+import { useMarkedSecurities } from "../logic/markLogic";
 import {
   Table,
   TableHead,
