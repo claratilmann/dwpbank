@@ -9,25 +9,27 @@ Dies ist eine React-Anwendung, mit der Sie Wertpapiere suchen, filtern, vergleic
 
 ## Installation
 
-1. **Repository klonen**  
-   git clone <REPO-URL>
+1. **Repository klonen**
+```
+   git clone github.com/claratilmann/dwpbank
    cd <Projektordner>
-
-2. **Abhängigkeiten installieren**  
+```
+3. **Abhängigkeiten installieren**
+```
    npm install
-
+```
 ## Anwendung starten
-
+```
     npm run dev
-
+```
 Die App ist dann unter http://localhost:5173 verfügbar.
 
 ## Erstellen des Projekts
 
 Um das Projekt für die Produktion zu erstellen, verwenden Sie den folgenden Befehl:
-
+```
 npm run build
-
+```
 ## Features
 
 - **Suche & Filter:** Wertpapiere nach Typ und Risiko filtern
@@ -39,8 +41,8 @@ npm run build
 
 - `src/components/` – Wiederverwendbare Komponenten (z.B. Card, Navbar)
 - `src/css/` – CSS-Dateien für das Styling
-- `src/logic/` - Logik für speichern und markieren von Wertpapieren
-- `src/pages/` – Seiten wie Suche, Vergleich, Detail, Gespeichert
+- `src/logic/` - Logik für Speichern und Markieren von Wertpapieren
+- `src/pages/` – Einzelne Seiten: Suche, Vergleich, Detail, Gespeichert
 - `src/data.json` – Beispieldaten für Wertpapiere
 
 ## Hinweise
