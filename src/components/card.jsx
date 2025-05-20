@@ -5,8 +5,8 @@ Außerdem bietet sie Schaltflächen zum Speichern oder Markieren des Wertpapiers
 import PropTypes from "prop-types";
 import { useSavedSecurities } from "../logic/saveLogic";
 import { useMarkedSecurities } from "../logic/markLogic";
-import { Link } from "react-router-dom";
-import { Card, Button, Typography } from "@mui/material";
+//import { Link } from "react-router-dom";
+import { Card, Button, Typography, Link } from "@mui/material";
 import StarIcon from "@mui/icons-material/Star";
 import CompareArrowsIcon from "@mui/icons-material/CompareArrows";
 import "../css/card.css";
@@ -42,9 +42,9 @@ const SecuritiesCard = ({ security }) => {
           {isMarked ? "Nicht vergleichen" : "Vergleichen"}
         </Button>
       </div>
-      <Button>
-        <Link to={`/detail/${security.wkn}`}>Mehr Erfahren</Link>
-      </Button>
+      <Link href={`/detail/${security.wkn}`} variant="body1">
+        Mehr Erfahren
+      </Link>
     </Card>
   );
 };
